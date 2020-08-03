@@ -1,0 +1,269 @@
+ID,Name,Short Name,Type,Stations Reporting,% Active
+1,National Weather Service/Federal Aviation Administration,NWS/FAA,NWS/FAA (NWS),3423,74.53
+2,Interagency Remote Automatic Weather Stations,RAWS,Fire weather (RAWS),3345,66.88
+3,U.S. Army Dugway Proving Grounds,DUGWAY,Federal and state networks (FED+),31,96.77
+4,Utah Department of Transportation,UTAH DOT,Road and rail weather (TRANS),168,76.19
+5,NOAA Air Resources Laboratory Field Research Division,ARL FRD,Federal and state networks (FED+),38,89.47
+6,Forest Service Avalanche Center,AVALANCHE,Hydrological (HYDRO),63,68.25
+7,"U.S. Army Deseret Chemical Depot, Tooele County",TOOELE,State and Local (LOCAL),40,32.5
+8,Snownet/Local Mesonet,SNOWNET,State and Local (LOCAL),65,41.54
+9,Utah Department of Air Quality,AQ,Air Quality (AQ),50,40
+10,NOAA Air Resources Laboratory Special Operations and Resource Division,ARL SORD,Federal and state networks (FED+),44,52.27
+11,U.S. Bureau of Reclamation,AGRIMET,Agricultural (AG),96,93.75
+40,Washington State Department of Ecology Air Quality Network,WAAQ,Air Quality (AQ),30,3.33
+12,Miscellaneous,MISC,State and Local (LOCAL),75,52
+13,"Campbell Scientific, Inc.",CAMPBELL,State and Local (LOCAL),5,80
+14,Environment Canada,CANADA,"Offshore, CA, MX (EXT)",1120,76.25
+15,Montana Department of Transportation,MT DOT,Road and rail weather (TRANS),77,92.21
+16,Wyoming Department of Transportation,WY DOT,Road and rail weather (TRANS),100,94
+1005,Public schools,AWS,State and Local (LOCAL),30,--
+18,U.S. Bureau of Reclamation Provo Area Office,REC,Hydrological (HYDRO),14,--
+19,Central Utah Water Convservancy District,CUP,Hydrological (HYDRO),9,--
+20,Kennecott Utah Copper,KENNECOTT,State and Local (LOCAL),20,--
+21,The Flood Control District of Maricopa County,AZ ALERT,State and Local (LOCAL),361,96.68
+22,Nevada Department of Transportation,NV DOT,Road and rail weather (TRANS),117,88.89
+23,Colorado Basin River Forecast Center,CBRFC,Hydrological (HYDRO),58,72.41
+24,Clark County Nevada Flood Control District,LAS VEGAS,State and Local (LOCAL),56,--
+25,Natural Resources Conservation Service,SNOTEL,Hydrological (HYDRO),935,91.02
+26,Utah Climate Center,UTAH CLIMATE CENTER,Agricultural (AG),65,69.23
+31,Bay Area Mesoscale Initiative,BAMI,State and Local (LOCAL),20,--
+41,Idaho Transportation Department,ITD,Road and rail weather (TRANS),137,94.16
+1004,Vertical Transport and Mixing Experiment. OCT 2000,VTMX,State and Local (LOCAL),78,--
+33,Southern Agricultural Research Center,SARC,Agricultural (AG),3,100
+34,Meteorological Solutions Inc.,MSI,State and Local (LOCAL),3,33.33
+36,Washington Department of Transportation,WA DOT,Road and rail weather (TRANS),139,82.01
+37,Northwest Avalanche Center,NWAC,Hydrological (HYDRO),69,68.12
+38,Hanford Meteorological Monitoring Network,HMMN,Federal and state networks (FED+),32,90.63
+1002,Intermountain Precipitation Experiment. FEB 2000,IPEX,State and Local (LOCAL),8,--
+44,Denver Urban Drainage and Flood Control District,DUDFCD,State and Local (LOCAL),204,50
+39,The Arizona Meteorological Network,AZMET,State and Local (LOCAL),38,60.53
+42,KBCI,KBCI,State and Local (LOCAL),16,--
+43,California Nevada River Forecast Center,CNRFC,Hydrological (HYDRO),694,84.15
+45,Boulder WFO National Weather Service,BWFO NWS,State and Local (LOCAL),16,6.25
+1003,2002 Winter Olympics TMOS. FEB-MAR 2002,TMOS,State and Local (LOCAL),4,--
+46,Colorado Avalanche Information Center,CAIC,Hydrological (HYDRO),29,55.17
+47,KSL,KSL,State and Local (LOCAL),1,100
+48,Bridger Teton National Forest Avalanche Center,BTAVAL,Hydrological (HYDRO),21,95.24
+49,Oregon Department of Transportation,ODOT,Road and rail weather (TRANS),174,89.66
+50,Community Environmental Monitoring Program,CEMP,Federal and state networks (FED+),30,43.33
+51,Los Alamos National Laboratory,LANL,Federal and state networks (FED+),6,66.67
+52,Grand Staircase-Escalante National Monument,GSE,State and Local (LOCAL),19,--
+53,4UTAH,4UTAH,State and Local (LOCAL),1,--
+54,Pendleton Weather Forecast Office,PDTWFO,State and Local (LOCAL),65,3.08
+55,Missoula Weather Forecast Office,MSOWFO,State and Local (LOCAL),50,14
+88,Flagstaff Weather Forecast Office,FGZWFO,State and Local (LOCAL),12,--
+87,"SunCrest Community, Draper, UT",SUNCREST,State and Local (LOCAL),0,--
+56,Great Falls Weather Forecast Office,GTFWFO,State and Local (LOCAL),46,65.22
+57,California Air Resources Board,CARB,Air Quality (AQ),266,64.66
+58,Mt. Shasta Avalanche Center,SHASAVAL,Hydrological (HYDRO),6,66.67
+59,California Department of Transportation,CALTRANS,Road and rail weather (TRANS),154,70.78
+60,Florida Automated Weather Network,FAWN,Federal and state networks (FED+),57,71.93
+1001,Urban Trace-gas Emissions Study,UTES,State and Local (LOCAL),6,--
+86,Snowbird Ski and Summer Resort,SNOWBIRD,State and Local (LOCAL),3,33.33
+61,Department of Energy Office of Repository Development,DOERD,State and Local (LOCAL),1,--
+62,Desert Research Institute,DRI,State and Local (LOCAL),162,42.59
+63,Colorado Department of Transportation,CDOT,Road and rail weather (TRANS),182,67.03
+64,Union Pacific Railroad,UPR,Road and rail weather (TRANS),1433,87.86
+65,Automatic Position Reporting System WX NET/Citizen Weather Observer Program,APRSWXNET/CWOP,CWOP (PUBLIC),22270,44.04
+66,California Irrigation Management Information System,CIMIS,Agricultural (AG),181,69.06
+67,White Pine Ski Area,WHITEPINE,Hydrological (HYDRO),2,--
+68,Glacier National Park,GNP,State and Local (LOCAL),4,75
+27,Montana Counties Soil Climate Network,MCSCN,Agricultural (AG),36,13.89
+28,Servicio Meteorologico Nacional (Mexico),MEXICO,"Offshore, CA, MX (EXT)",82,80.49
+29,Soil Climate Analysis Network,SCAN,Agricultural (AG),222,79.73
+32,Utah Division of Water Resources,UDWR,Hydrological (HYDRO),0,--
+35,Weather For You,WX4U,CWOP (PUBLIC),414,--
+69,FSL Ground-Based GPS,GPSMET,Federal and state networks (FED+),324,--
+70,West Texas Mesonet,WTEXAS,Federal and state networks (FED+),133,46.62
+71,Wisconsin Department of Transportation,WIDOT,Road and rail weather (TRANS),77,11.69
+72,NWS Modernized Cooperative Observer Program - New England,NWS COOP,Federal and state networks (FED+),158,15.82
+81,High Performance Wireless Research and Education Network,HPWREN,State and Local (LOCAL),24,83.33
+82,Pocatello/Idaho Falls Weather Forecast Office,PIHWFO,State and Local (LOCAL),2,--
+30,China Lake/Fort Irwin,CLR,Federal and state networks (FED+),24,--
+83,Hanford Weather Forecast Office,HNXWFO,State and Local (LOCAL),28,57.14
+84,Glasgow Weather Forecast Office,GGWWFO,State and Local (LOCAL),38,63.16
+85,San Diego Weather Forecast Office,SGXWFO,State and Local (LOCAL),261,42.15
+89,Oregon Department of Environmental Quality,ODEQ,Air Quality (AQ),10,--
+17,Los Angeles/Oxnard Weather Forecast Office,LOXWFO,State and Local (LOCAL),55,38.18
+90,Alaska Department of Transportation,AKDOT,Road and rail weather (TRANS),71,84.51
+91,Iowa Department of Transportation,IADOT,Road and rail weather (TRANS),65,96.92
+92,Portland Weather Forecast Office,PQRWFO,State and Local (LOCAL),23,82.61
+93,Medford Weather Forecast Office,MFRWFO,State and Local (LOCAL),1,100
+94,Columbia Plateau Conservation Research Center,CPCRC,Agricultural (AG),12,33.33
+95,Mammoth Mountain Ski Area,MAMMOTH,Hydrological (HYDRO),17,47.06
+96,Moored Buoys and CMAN,MARITIME,"Offshore, CA, MX (EXT)",842,40.97
+97,Maine Department of Transportation,MEDOT,Road and rail weather (TRANS),11,54.55
+98,Kentucky Transportation Cabinet RWIS,KYDOT,Road and rail weather (TRANS),39,100
+99,Maryland Department of Transportation,MDDOT,Road and rail weather (TRANS),150,94
+100,Minnesota Department of Transportation,MNDOT,Road and rail weather (TRANS),98,97.96
+101,North Dakota Department of Transporatation,NDDOT,Road and rail weather (TRANS),29,100
+102,Nebraska Department of Roads,NEDOR,Road and rail weather (TRANS),67,82.09
+103,Ohio Department of Transportation,OHDOT,Road and rail weather (TRANS),183,92.35
+104,Virginia Department of Transportation,VADOT,Road and rail weather (TRANS),99,91.92
+105,New Hampshire Department of Transportation,NHDOT,Road and rail weather (TRANS),29,65.52
+106,Hydrometeorological Automated Data System,HADS,Hydrological (HYDRO),7520,78.23
+123,Climate Reference Network,CRN,Federal and state networks (FED+),211,79.15
+107,Fairbanks Weather Forecast Office,AFGWFO,State and Local (LOCAL),19,100
+108,MADIS Non-Commissioned AWOS,NCAWOS,NWS/FAA (NWS),189,75.13
+109,New Jersey Weather and Climate Network,NJNET,Federal and state networks (FED+),71,87.32
+110,Elko Weather Forecast Office,LKNWFO,State and Local (LOCAL),3,--
+111,Park City Mountain Resort,PCMR,State and Local (LOCAL),12,75
+112,Deer Valley Resort,DEERVLY,State and Local (LOCAL),7,100
+113,Santa Barbara County Air Pollution Control District,SBCAPCD,Air Quality (AQ),18,55.56
+114,AgWeatherNet,PAWS,Agricultural (AG),125,--
+115,BC Hydro,BCHYDRO,Hydrological (HYDRO),109,62.39
+116,Bureau of Reclamation Yakima Project,YAKIMA,Hydrological (HYDRO),7,--
+117,US Coast Guard Puget Sound,USCG PUGET,"Offshore, CA, MX (EXT)",13,--
+118,Indiana Department of Transportation,INDOT,Road and rail weather (TRANS),48,85.42
+119,Arizona Department of Transportation,AZDOT,Road and rail weather (TRANS),17,94.12
+120,Enviro-weather/Michigan State University,MAWN,Agricultural (AG),102,97.06
+121,National Ocean Service Physical Oceanographic Real-Time System,NOS-PORTS,"Offshore, CA, MX (EXT)",73,76.71
+122,National Ocean Service Water Level Observation Network,NOS-NWLON,"Offshore, CA, MX (EXT)",247,79.35
+124,Oregon Department of Agriculture,ODA,Agricultural (AG),10,--
+125,South Florida Water Management District,SFWMD,State and Local (LOCAL),26,76.92
+126,Dry Creek Experimental Watershed,DCEW,State and Local (LOCAL),5,60
+127,Colorado Department of Public Health and Environment,CDPHE,State and Local (LOCAL),20,55
+128,Monterey Weather Forecast Office,MTRWFO,State and Local (LOCAL),10,50
+129,Honolulu Weather Forecast Office,HNLWFO,State and Local (LOCAL),25,28
+130,CH2M HILL Hill Air Force Base,HILL,Federal and state networks (FED+),2,--
+131,Northeast Metro Pollution Prevention Alliance,NEMPPA,Air Quality (AQ),5,--
+132,Vermont Agency of Transportation,VTRANS,Road and rail weather (TRANS),44,90.91
+133,Schweitzer Mountain Resort,SCHWEITZER,State and Local (LOCAL),2,--
+134,Seattle Weather Forecast Office,SEWWFO,State and Local (LOCAL),24,75
+135,Caribou Weather Forecast Office,ME-CAR-Meso,State and Local (LOCAL),8,--
+136,AIRNow,AIRNOW,Air Quality (AQ),2050,77.9
+137,CA HYDRO,CA HYDRO,Hydrological (HYDRO),107,58.88
+138,Utah Fruit Growers Weather Monitoring Network,FGNet,Agricultural (AG),24,95.83
+139,San Diego Gas and Electric,SDGE,State and Local (LOCAL),188,97.87
+140,California Department of Water Resources,CDEC,Hydrological (HYDRO),8,75
+141,Weather Underground,WUNDERG,CWOP (PUBLIC),31,--
+142,Persistent Cold-Air Pool Study,PCAPS,State and Local (LOCAL),106,--
+143,Delaware Environmental Observing System,DEOS,Federal and state networks (FED+),61,91.8
+144,U.S. Army White Sands Missile Range,WSMR,Federal and state networks (FED+),51,80.39
+145,Edwards Air Force Base,EDW,Federal and state networks (FED+),14,--
+146,Reno Wind Demonstration Project,RENO,State and Local (LOCAL),4,--
+147,MADIS Miscellaneous,MADIS MISC,State and Local (LOCAL),197,7.61
+148,Kentucky Mesonet,KYMN,Federal and state networks (FED+),73,--
+149,West Virginia Department of Transportation,WVDOT,Road and rail weather (TRANS),40,67.5
+1006,University of Utah A.S. Field Projects,UUFIELD,State and Local (LOCAL),18,--
+150,New Mexico Environment Department Air Monitoring Network,NMAQ,Air Quality (AQ),20,85
+151,Bonneville Power Administration Network,BPANET,State and Local (LOCAL),20,--
+152,The University of Texas at Austin McDonald Observatory,MCDONALD,State and Local (LOCAL),2,100
+153,University of Utah MesoWest Mesonet,UUNET,State and Local (LOCAL),66,90.91
+154,Lyndon State College,LSCNET,State and Local (LOCAL),0,--
+155,DCNet,DCNET,State and Local (LOCAL),3,--
+156,University of Missouri Extension Commercial Agriculture Automated Weather Network,MOCOMAGNET,Agricultural (AG),30,96.67
+157,Marquette Weather Forecast Office,MQTWFO,State and Local (LOCAL),7,71.43
+158,Delaware Department of Transportation,DEDOT,Road and rail weather (TRANS),29,100
+159,Florida Department of Transportation,FLDOT,Road and rail weather (TRANS),5,--
+160,Illinois Department of Transportation,ILDOT,Road and rail weather (TRANS),65,9.23
+161,Massachusetts Executive Office of Transportation,MAEOT,Road and rail weather (TRANS),41,92.68
+162,Michigan Department of Transportation,MIDOT,Road and rail weather (TRANS),100,--
+163,Missouri Department of Transportation,MODOT,Road and rail weather (TRANS),38,84.21
+164,New Jersey Department of Transportation,NJDOT,Road and rail weather (TRANS),36,--
+165,New York State Department of Transportation,NYDOT,Road and rail weather (TRANS),28,--
+166,South Carolina Department of Transportation,SCDOT,Road and rail weather (TRANS),27,77.78
+167,South Dakota Department of Transportation,SDDOT,Road and rail weather (TRANS),91,95.6
+168,Tennessee Department of Transportation,TNDOT,Road and rail weather (TRANS),36,--
+169,Kansas Department of Transportation,KSDOT,Road and rail weather (TRANS),57,87.72
+170,U.S. Transportable Array,USARRAY,State and Local (LOCAL),947,38.12
+171,Oak Ridge National Laboratory,ORNL,Federal and state networks (FED+),12,--
+172,Eureka Weather Forecast Office,EKAWFO,State and Local (LOCAL),1,100
+173,Salt Lake Community College Mesonet,SLCCNET,State and Local (LOCAL),3,--
+174,San Jose State University,SJSUNET,State and Local (LOCAL),4,100
+175,El Paso Weather Forecast Office,EPZWFO,State and Local (LOCAL),6,83.33
+176,Cooperative SCAN,CSCAN,Agricultural (AG),5,--
+195,Multi-Agency Profiler Surface Observations,MAP,Federal and state networks (FED+),147,62.59
+1007,Non-satellite RAWS,NSRAWS,Fire weather (RAWS),341,--
+1008,TMP RAWS,TMPRAWS,Fire weather (RAWS),90,--
+177,Crater Lake National Park,CLNP,Federal and state networks (FED+),3,100
+178,Ventura County Air Pollution Control District,VCAPCD,Air Quality (AQ),6,100
+179,Alaska National Data Buoy Center,AJKNDBC,"Offshore, CA, MX (EXT)",19,100
+1009,Uintah Basin Ozone Study 2012-2013,UBOS,State and Local (LOCAL),9,--
+180,Rio Mesa Center - University of Utah,RIOMESA,State and Local (LOCAL),2,100
+181,Wisconsin Air Quality,WIAQ,Air Quality (AQ),1,--
+182,Canadian Natural Resource Agencies,CNRA,Hydrological (HYDRO),252,63.1
+183,Salt River Project,SRP,State and Local (LOCAL),30,100
+184,Midas Gold Corporation Network,MGCNET,Air Quality (AQ),1,100
+185,Colorado E-470 Public Highway Authority,COE470,Road and rail weather (TRANS),9,100
+186,Gulf of Maine Ocean Observing System,GOMOOS,"Offshore, CA, MX (EXT)",7,--
+187,Lower Colorado River Authority,LCRA,Hydrological (HYDRO),265,98.87
+188,National Estuarine Research Reserve System,NERRS,Hydrological (HYDRO),34,88.24
+189,Yuma Proving Ground,YPG,Federal and state networks (FED+),29,--
+190,Reno Weather Forecast Office,REVWFO,State and Local (LOCAL),6,100
+191,NASA Jet Propulsion Laboratory,JPL,Federal and state networks (FED+),5,100
+1010,Ontario Winter Lake-Effect Systems Project 2013-2014,OWLES,State and Local (LOCAL),2,--
+192,Albany Weather Forecast Office,ALBWFO,Hydrological (HYDRO),4,100
+193,University of California Irvine,UCINET,State and Local (LOCAL),14,50
+194,Utah Climate Center AgWeather Network,UCC-AGNET,Agricultural (AG),46,97.83
+196,New Mexico Climate Center,NMCC,State and Local (LOCAL),20,55
+197,Orange County Public Works,OCPW,State and Local (LOCAL),60,--
+198,iUtah Water Resources Project,IUTAH,State and Local (LOCAL),6,66.67
+199,ALERT Miscellaneous,ALERT-MISC,State and Local (LOCAL),29,75.86
+200,Juneau Weather Forecast Office,AJKWFO,State and Local (LOCAL),40,80
+201,Vermont Weather Analytics Center,VTWAC,State and Local (LOCAL),34,64.71
+202,CIRES/ATOC Univ. of Colorado Boulder,ATOC,State and Local (LOCAL),3,100
+203,"United States Geological Survey, Water Service",USGS HYDRO,Federal and state networks (FED+),2197,13.29
+1011,Great Salt Lake Summer Ozone Study 2015,GSLSO3S,State and Local (LOCAL),15,--
+204,US Bureau of Reclamation,USBR HYDRO,Federal and state networks (FED+),386,0.26
+205,Rainwise,RAINWISE,Hydrological (HYDRO),20,70
+206,New Mexico Department of Transportation,NMDOT,Road and rail weather (TRANS),9,77.78
+207,Boulder Creek Critical Zone Observatory,BCCZO,State and Local (LOCAL),3,--
+208,Purple Air Quality Network,PURPLEAIR,State and Local (LOCAL),4308,82.47
+209,Uintah Basin Air Quality,UB-AIR,State and Local (LOCAL),12,50
+210,Georgia Department of Transportation,GADOT,Road and rail weather (TRANS),57,100
+211,Integrated Flood Observing and Warning System,IFLOWS,Hydrological (HYDRO),1887,71.07
+212,Johnson Space Center NASA,JSCNASA,Federal and state networks (FED+),55,63.64
+73,NWS Cooperative Station Climate,COOPA,NWS/FAA (NWS),809,82.94
+74,NWS Cooperative Station Climate - Hydro,COOPAB,NWS/FAA (NWS),2479,82.37
+75,NWS Cooperative Station Climate - Hydro - Met,COOPABC,NWS/FAA (NWS),574,88.15
+76,NWS Cooperative Station Climate - Met,COOPAC,NWS/FAA (NWS),84,77.38
+77,NWS Cooperative Station Hydro,COOPB,NWS/FAA (NWS),2474,76.27
+78,NWS Cooperative Station Hydro - Met,COOPBC,NWS/FAA (NWS),155,81.29
+79,NWS Cooperative Station Local or Met,COOPC,NWS/FAA (NWS),242,82.23
+80,NWS Unofficial Cooperative Station,UCOOP,NWS/FAA (NWS),818,52.57
+213,Texas Water Development Board,TWDB,Hydrological (HYDRO),64,98.44
+214,Squaw Valley and Alpine Meadows Ski Resorts,TAHOE,Hydrological (HYDRO),11,72.73
+215,Taos Avalanche Center,TAOS,Hydrological (HYDRO),6,100
+216,Harris County Flood Control District,HCFCD,Hydrological (HYDRO),125,99.2
+217,SLCo Watershed Stream and Rain Gauging Program,SLCO,State and Local (LOCAL),15,100
+218,Iowa Environmental Mesonet,IEM,Federal and state networks (FED+),68,38.24
+219,Dyacon Inc.,DYACON,State and Local (LOCAL),7,85.71
+220,Edwards Aquifer Authority,EAA,Hydrological (HYDRO),10,90
+221,Colorado Agricultural Meteorological Network,CoAgMet,Agricultural (AG),97,88.66
+222,Western Weather Group - Sonoma County,WWG-SONOMA,Agricultural (AG),52,90.38
+223,Western Weather Group - Lodi Wine Country,WWG-LLWC,Agricultural (AG),38,84.21
+224,Holfuy Meteorology,HOLFUY,State and Local (LOCAL),5,100
+225,City of Austin Flood Control,AUSTIN,Hydrological (HYDRO),78,100
+226,Intellisense Systems Inc.,INTELLISENSE,State and Local (LOCAL),55,18.18
+227,Binghamton Weather Forecast Office,BGMWFO,State and Local (LOCAL),12,83.33
+228,Olinga Learning,OLINGA,State and Local (LOCAL),3,--
+229,Pacific Gas and Electric,PGE,State and Local (LOCAL),626,96.65
+230,Southern Sandoval County - Arroyo Flood Control Authority,SSCAFCA,Hydrological (HYDRO),13,84.62
+231,Southern California Edison,SC-EDISON,State and Local (LOCAL),511,98.04
+232,City of Grand Prairie,GPTX,State and Local (LOCAL),40,65
+233,Wyoming Agricultural Climate Network,WACNET,Agricultural (AG),19,100
+234,Guadalupe-Blanco River Authority,GBRA,State and Local (LOCAL),69,100
+235,JE Fuller ALERT,JE-FULLER,State and Local (LOCAL),321,81.31
+236,Delta Agricultural Weather Center,MS-DELTA,Agricultural (AG),20,85
+237,Utah Atmospheric Trace Gas and Air Quality,UATAQ,State and Local (LOCAL),5,100
+238,Aspen Global Change Institute,AGCI,State and Local (LOCAL),8,100
+239,Global METAR,GLOBAL-METAR,NWS/FAA (NWS),2608,89.8
+240,Utah AirU Network,AIRU,State and Local (LOCAL),140,81.43
+241,City of Portland HYDRA Rainfall Network,HYDRA,Hydrological (HYDRO),28,89.29
+242,DTN,DTN,Agricultural (AG),112,90.18
+243,Kirkwood Mountain Resort,KIRKWOOD,State and Local (LOCAL),2,100
+244,DataWise Environmental Monitoring Inc.,DATAWISE,Hydrological (HYDRO),96,98.96
+245,Texas Soil Observation Network,TXSON,State and Local (LOCAL),33,93.94
+246,Liberty Utilities,LIBERTY,State and Local (LOCAL),9,77.78
+247,PacifiCorp,PACIFICORP,State and Local (LOCAL),34,79.41
+248,Coastal Carolina University,CCU,State and Local (LOCAL),90,86.67
+249,WeatherSTEM,WEATHERSTEM,CWOP (PUBLIC),522,75.86
+250,Pennsylvania Allegheny County Air Quality Network,PA-ACAQ,Air Quality (AQ),8,87.5
+251,DEP Commonwealth of Pennsylvania Air Monitoring System,PA-COPAMS,Air Quality (AQ),38,76.32
+252,Env Canada - Government of British Columbia - Ministry of Forests,EC-BC-FLNR,"Offshore, CA, MX (EXT)",236,91.95
+253,Env Canada - Government of British Columbia - Ministry of Environment,EC-BC-ENV,"Offshore, CA, MX (EXT)",108,72.22
+254,Env Canada - Government of British Columbia - Ministry of Transportation and Infrastructure,EC-BC-TRAN,"Offshore, CA, MX (EXT)",154,96.1
+255,Env Canada - Government of Yukon,EC-YTG,"Offshore, CA, MX (EXT)",55,45.45
+256,Louisiana State University AgCenter,LSU-AGNET,Agricultural (AG),8,100
+257,Pennsylvania Department of Transportation,PADOT,Road and rail weather (TRANS),74,100
