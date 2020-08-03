@@ -82,7 +82,7 @@ class Station:
                 continue
         
     """"""
-    def getStations(file):
+    def loadFromJSON(file):
         with open(file, 'r', encoding='utf-8', newline='') as f:
             file = json.load(f)
             st = [Station(n['NAME'],
@@ -124,7 +124,9 @@ class Station:
         timeForm = pd.to_datetime(self.time, infer_datetime_format=True)
         setattr(self, 'time', timeForm)
         # resample time and data with nearest neighbor from center
-        df = Station.toDF(self, variable).resample(filt).nearest() 
+        df = Station.toDF(self, variable).resample(filt).nearest()
+        # rename data column by given variable
+        df.columns = [variable]
         return df
     
     def rmse(predictions, targets):
