@@ -50,9 +50,15 @@ class Station:
         self.wdir = windDirection
 
     """"""
-    def download(filename, token, lat, lon, radius, max_stations, variables, start, end):
+    def download(filename, token, lat, lon, radius, max_stations, start, end):
         API_ROOT = 'https://api.synopticdata.com/v2/'
         api_request_url = os.path.join(API_ROOT, "stations/timeseries")
+        variables = ('air_temp',
+                     'dew_point_temperature',
+                     'sea_level_pressure',
+                     'wind_speed',
+                     'wind_direction',
+                     'precip_accum_one_minute')
         api_arguments = {'token':token,
                          'radius':(lat,lon,radius),
                          'limit':max_stations,

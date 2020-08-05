@@ -113,3 +113,12 @@ def dryALR(height):
     gamma = -9.8 #degrees C per km
     gamma = gamma / 3280.84 #km to feet
     return 12.75 + gamma*height - 700*gamma
+
+#getting time series data at a specific time from a DataFrame
+def getAtTime(df, stamp, col):
+    try:
+        data = df.loc[stamp][col]
+        return data
+    except:
+        data = np.nan
+        return data
