@@ -50,6 +50,23 @@ class Station:
         self.wdir = windDirection
 
     """"""
+    def __add__(self, other):
+        if self.name != other.name:
+            raise ValueError('Stations are incommensurable')
+        return Station(self.name, 
+                       self.st, 
+                       self.elev, 
+                       self.mnet, 
+                       self.lat, 
+                       self.lon, 
+                       self.time + other.time, 
+                       np.concatenate([self.temp, other.temp]), 
+                       np.concatenate([self.td, other.td]), 
+                       np.concatenate([self.pres, other.pres]), 
+                       np.concatenate([self.wspd + other.wspd]), 
+                       np.concatenate([self.wdir + other.wdir]))
+    
+    """"""
     def download(filename, token, lat, lon, radius, max_stations, start, end):
         API_ROOT = 'https://api.synopticdata.com/v2/'
         api_request_url = os.path.join(API_ROOT, "stations/timeseries")
@@ -83,10 +100,30 @@ class Station:
     def searchObservations(dic, keyName):
         for key in dic['OBSERVATIONS']:
             if key.startswith(keyName):
-                return dic['OBSERVATIONS'][key]
+                values = dic['OBSERVATIONS'][key]
+                if not isinstance(values[0], str):
+                    return np.array(values, dtype=np.float)
+                else:
+                    return values
             else:
                 continue
         
+    """"""
+    def noneToNan(self):
+        if self.time is None:
+            self.time = [np.nan]
+        if self.temp is None:
+            self.temp = [np.nan]
+        if self.td is None:
+            self.td = [np.nan]
+        if self.pres is None:
+            self.pres = [np.nan]
+        if self.wspd is None:
+            self.wspd = [np.nan]
+        if self.wdir is None:
+            self.wdir = [np.nan]
+        return self
+    
     """"""
     def loadFromJSON(file):
         with open(file, 'r', encoding='utf-8', newline='') as f:
@@ -104,7 +141,18 @@ class Station:
                           Station.searchObservations(n, 'wind_speed'),
                           Station.searchObservations(n, 'wind_direction')) 
                     for n in file['STATION'] if 'OBSERVATIONS' in n]
-        return st
+            stNan = [s.noneToNan() for s in st]
+        return stNan
+    
+    """"""
+    def concatJSON(paths):
+        allLoaded = [Station.loadFromJSON(p) for p in paths]
+        concat = np.concatenate(allLoaded)
+        return concat
+    
+    """"""
+    # def groupStations(stations):
+    #     return grouped
     
     """"""
     def plotStation(st, attr):
