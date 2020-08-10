@@ -11,11 +11,14 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as dts
 import pandas as pd
 import json
-import itertools as it
-from haversine import haversine
-from datetime import datetime
 import os
 import requests
+import itertools as it
+from glob import glob
+from haversine import haversine
+from datetime import datetime
+from operator import attrgetter
+
 
 class Station:
     """ A class for wrangling station data """
@@ -59,7 +62,7 @@ class Station:
                        self.mnet, 
                        self.lat, 
                        self.lon, 
-                       self.time + other.time, 
+                       np.concatenate([self.time, other.time]), 
                        np.concatenate([self.temp, other.temp]), 
                        np.concatenate([self.td, other.td]), 
                        np.concatenate([self.pres, other.pres]), 
