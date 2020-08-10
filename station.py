@@ -63,8 +63,8 @@ class Station:
                        np.concatenate([self.temp, other.temp]), 
                        np.concatenate([self.td, other.td]), 
                        np.concatenate([self.pres, other.pres]), 
-                       np.concatenate([self.wspd + other.wspd]), 
-                       np.concatenate([self.wdir + other.wdir]))
+                       np.concatenate([self.wspd, other.wspd]), 
+                       np.concatenate([self.wdir, other.wdir]))
     
     """"""
     def download(filename, token, lat, lon, radius, max_stations, start, end):
@@ -86,16 +86,7 @@ class Station:
         j = req.json()
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(j, f, ensure_ascii=False, indent=4)
-    
-    """"""
-    def jsonToDF(file):
-        with open(file, 'r', encoding='utf-8', newline='') as f:
-            loaded = json.load(f)
-            dicts = [d for d in loaded['STATION']]
-            df = pd.json_normalize(dicts)
-        return df
 
-        
     """"""
     def searchObservations(dic, keyName):
         for key in dic['OBSERVATIONS']:
@@ -108,24 +99,33 @@ class Station:
             else:
                 continue
         
-    """"""
+    """
+    If a station has "None" instead of observations data, replace None with
+    an array of NaNs whose length equals that of the existing data
+    """
     def noneToNan(self):
+        #find length of times
+        maxLength = len(self.time)
+        
+        #generate array of NaNs
+        nans = np.full_like(np.arange(maxLength), np.nan, dtype=float)
+        
         if self.time is None:
-            self.time = [np.nan]
+            self.time = nans
         if self.temp is None:
-            self.temp = [np.nan]
+            self.temp = nans
         if self.td is None:
-            self.td = [np.nan]
+            self.td = nans
         if self.pres is None:
-            self.pres = [np.nan]
+            self.pres = nans
         if self.wspd is None:
-            self.wspd = [np.nan]
+            self.wspd = nans
         if self.wdir is None:
-            self.wdir = [np.nan]
+            self.wdir = nans
         return self
     
     """"""
-    def loadFromJSON(file):
+    def loadJSON(file):
         with open(file, 'r', encoding='utf-8', newline='') as f:
             file = json.load(f)
             st = [Station(n['NAME'],
@@ -145,14 +145,29 @@ class Station:
         return stNan
     
     """"""
-    def concatJSON(paths):
-        allLoaded = [Station.loadFromJSON(p) for p in paths]
+    def loadMultipleJSON(paths):
+        allLoaded = [Station.loadJSON(p) for p in paths]
         concat = np.concatenate(allLoaded)
-        return concat
+        get_attr = attrgetter('name')
+        sorted_list = sorted(concat, key=get_attr)
+        groupdict = {k: list(g) for k, g in it.groupby(sorted_list, get_attr)}
+        #we can sum stations because of the __add__
+        result = [np.sum(groupdict[g]) for g in groupdict]
+        return result
     
     """"""
-    # def groupStations(stations):
-    #     return grouped
+    def toDataFrame(self):
+        data = {'time':self.time,
+                'temp':self.temp,
+                'td':self.td,
+                'pres':self.pres,
+                'wspd':self.wspd,
+                'wdir':self.wdir}
+        df = pd.DataFrame(data=data)
+        df = df.set_index(pd.to_datetime(df['time']))
+        df = df.drop(['time'], axis=1)
+        df = df[~df.index.duplicated()]
+        return df
     
     """"""
     def plotStation(st, attr):
@@ -166,22 +181,6 @@ class Station:
             values = [getattr(s, attr) for s in ls]
             ax.scatter(lons, lats, c=values, marker=next(markers))
         return None
-    
-    """"""
-    def toDF(self, attr):
-        frame = pd.DataFrame(self.time, columns=['datetime'])
-        frame['data'] = getattr(self, attr)
-        return frame.set_index('datetime')
-    
-    def processTS(self, variable, filt='60T'):
-        # acquire times and format them
-        timeForm = pd.to_datetime(self.time, infer_datetime_format=True)
-        setattr(self, 'time', timeForm)
-        # resample time and data with nearest neighbor from center
-        df = Station.toDF(self, variable).resample(filt).nearest()
-        # rename data column by given variable
-        df.columns = [variable]
-        return df
     
     def rmse(predictions, targets):
         """Calculate root-mean-squared error"""
