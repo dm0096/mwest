@@ -14,18 +14,14 @@ import json
 import os
 import requests
 import itertools as it
-from glob import glob
 from haversine import haversine
 from datetime import datetime
 from operator import attrgetter
 
 
 class Station:
-    """ A class for wrangling station data """
+    """ A class for wrangling MesoWest surface data """
     
-    file = None
-    
-    """"""
     def __init__(self, 
                  name,
                  state,
@@ -52,7 +48,9 @@ class Station:
         self.wspd = windSpeed
         self.wdir = windDirection
 
-    """"""
+    """
+    Define an adding operation that combines two Stations at a time
+    """
     def __add__(self, other):
         if self.name != other.name:
             raise ValueError('Stations are incommensurable')
@@ -69,7 +67,9 @@ class Station:
                        np.concatenate([self.wspd, other.wspd]), 
                        np.concatenate([self.wdir, other.wdir]))
     
-    """"""
+    """
+    Download a JSON data file from Synoptic/MesoWest with the given parameters
+    """
     def download(filename, token, lat, lon, radius, max_stations, start, end):
         API_ROOT = 'https://api.synopticdata.com/v2/'
         api_request_url = os.path.join(API_ROOT, "stations/timeseries")
@@ -90,7 +90,9 @@ class Station:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(j, f, ensure_ascii=False, indent=4)
 
-    """"""
+    """
+    Search the JSON for observations starting with a given name
+    """
     def searchObservations(dic, keyName):
         for key in dic['OBSERVATIONS']:
             if key.startswith(keyName):
@@ -103,7 +105,7 @@ class Station:
                 continue
         
     """
-    If a station has "None" instead of observations data, replace None with
+    If a Station has "None" instead of observations data, replace None with
     an array of NaNs whose length equals that of the existing data
     """
     def noneToNan(self):
@@ -127,7 +129,9 @@ class Station:
             self.wdir = nans
         return self
     
-    """"""
+    """
+    Load a single JSON file and return a Station object
+    """
     def loadJSON(file):
         with open(file, 'r', encoding='utf-8', newline='') as f:
             file = json.load(f)
@@ -147,7 +151,10 @@ class Station:
             stNan = [s.noneToNan() for s in st]
         return stNan
     
-    """"""
+    """
+    Load multiple JSON files into Station objects. Returns a list of Stations
+    grouped by name containing concatenated data
+    """
     def loadMultipleJSON(paths):
         allLoaded = [Station.loadJSON(p) for p in paths]
         concat = np.concatenate(allLoaded)
@@ -158,7 +165,9 @@ class Station:
         result = [np.sum(groupdict[g]) for g in groupdict]
         return result
     
-    """"""
+    """
+    Create a DataFrame from a Station object with a datetime index
+    """
     def toDataFrame(self):
         data = {'time':self.time,
                 'temp':self.temp,
@@ -172,7 +181,9 @@ class Station:
         df = df[~df.index.duplicated()]
         return df
     
-    """"""
+    """
+    Make a scatter plot with markers based on each Station's MNET ID
+    """
     def plotStation(st, attr):
         ids = [getattr(s, attr) for s in st]
         gp = [[s for s in st if s.mnet == n] for n in np.unique(ids)] #list of stations grouped by attr
@@ -185,18 +196,24 @@ class Station:
             ax.scatter(lons, lats, c=values, marker=next(markers))
         return None
     
+    """
+    Calculate root-mean-squared error
+    """
     def rmse(predictions, targets):
-        """Calculate root-mean-squared error"""
         return np.sqrt(((predictions - targets) ** 2).mean())
     
+    """
+    Format times into matplotlib-compatible floats
+    """
     def formatTime(self):
-        """Format times into matplotlib-compatible floats"""
         dateTimes = [datetime.strptime(t, "%Y-%m-%dT%H:%M:%S%z") for t in self.time]
         self.time = dts.date2num(dateTimes)
     
+    """
+    Return the Station with the minimum haversine distance to a given 
+    Station and set 'haversine' attribute for the Station with distance
+    """
     def toNearestStation(self, stations):
-        """Return the station with the minimum haversine distance to a given 
-        station and set 'haversine' attribute for the station with distance"""    
         h = [haversine((self.lat, self.lon), (s.lat, s.lon)) for s in stations]
         setattr(self, 'haversine', min(h))
         for s in stations:
