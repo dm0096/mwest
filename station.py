@@ -130,7 +130,7 @@ class Station:
         return self
     
     """
-    Load a single JSON file and return a Station object
+    Load a single JSON file and return Station objects
     """
     def loadJSON(file):
         with open(file, 'r', encoding='utf-8', newline='') as f:
@@ -169,16 +169,16 @@ class Station:
     Create a DataFrame from a Station object with a datetime index
     """
     def toDataFrame(self):
-        data = {'time':self.time,
-                'temp':self.temp,
+        times = pd.to_datetime(self.time, infer_datetime_format=True)
+        data = {'temp':self.temp,
                 'td':self.td,
                 'pres':self.pres,
                 'wspd':self.wspd,
                 'wdir':self.wdir}
-        df = pd.DataFrame(data=data)
-        df = df.set_index(pd.to_datetime(df['time']))
-        df = df.drop(['time'], axis=1)
-        df = df[~df.index.duplicated()]
+        df = pd.DataFrame(data=data, index=times)
+        # df = df.set_index(pd.to_datetime(df['time'], infer_datetime_format=True))
+        # df = df.drop(['time'], axis=1)
+        # df = df[~df.index.duplicated()]
         return df
     
     """
